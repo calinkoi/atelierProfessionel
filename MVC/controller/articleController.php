@@ -48,7 +48,8 @@
         $Article = new Article($this->connexion);
         $Article->setArt_nom($_POST["nom"]);
         $Article->setArt_prix($_POST["prix"]);
-        $Article->setArt_poid($_POST["poid"]);
+        $Article->setArt_float($_POST["float"]);
+        $Article->setArt_pattern($_POST["pattern"]);
         if($Article->insert()){
             header('Location: index.php');
         }     
@@ -58,7 +59,8 @@
         $Article->setArt_id($_POST["id"]);
         $Article->setArt_nom($_POST["nom"]);
         $Article->setArt_prix($_POST["prix"]);
-        $Article->setArt_poid($_POST["poid"]);
+        $Article->setArt_pattern($_POST["pattern"]);
+        $Article->setArt_float($_POST["float"]);
         if($Article->update()){
             header('Location: index.php');
         }     

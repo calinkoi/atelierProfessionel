@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemple PHP+PDO+POO+MVC</title>
+    <title>CS2 skins saver</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> <!-- Correction ajout CSS bootstrap -->
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> <!-- Correction ajout JS bootstrap -->
     <style>
@@ -25,7 +25,9 @@
             <input type="hidden" name="id" value="<?php echo $data["article"]->art_id ?>" />
             Nom: <input type="text" name="nom" value="<?php echo $data["article"]->art_nom ?>" class="form-control" />
             Prix: <input type="text" name="prix" value="<?php echo $data["article"]->art_prix ?>" class="form-control" />
-            Poid: <input type="text" name="poid" value="<?php echo $data["article"]->art_poid ?>" class="form-control" />
+            Float: <input type="text" name="float" value="<?php echo $data["article"]->art_float ?>" class="form-control" />
+            Pattern: <input type="text" name="pattern" value="<?php echo $data["article"]->art_pattern ?>" class="form-control" />
+
             <input type="submit" value="Modifier" class="btn btn-info"/>
         </form>
         <form action="index.php?controller=articles&action=delete" method="post">
