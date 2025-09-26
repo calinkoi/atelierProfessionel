@@ -9,7 +9,7 @@
             private $art_float;
             private $art_pattern;
 
-
+ 
             public function __construct($connexion){
                 $this->connexion = $connexion;
             }
