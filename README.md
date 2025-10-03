@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Atelier_Professionnel
 =======
 # atelierPro

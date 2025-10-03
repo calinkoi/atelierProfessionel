@@ -20,7 +20,7 @@
 <body>
     <div class="col-lg-5 mr-auto">
         <form action="index.php?controller=articles&action=maj" method="post">
-            <h3>Article detaillé</h3>
+            <h3>Skin details</h3>
             <hr/>
             <input type="hidden" name="id" value="<?php echo $data["article"]->art_id ?>" />
             Nom: <input type="text" name="nom" value="<?php echo $data["article"]->art_nom ?>" class="form-control" />
