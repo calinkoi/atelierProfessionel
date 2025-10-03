@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 03 oct. 2025 à 06:14
+-- Généré le : ven. 03 oct. 2025 à 06:24
 -- Version du serveur : 8.0.40
 -- Version de PHP : 8.3.14
 
@@ -18,77 +18,54 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `bibliotheque`
+-- Base de données : `mvc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `livres`
+-- Structure de la table `article`
 --
 
-CREATE TABLE `livres` (
-  `id` int NOT NULL,
-  `titre` varchar(255) DEFAULT NULL,
-  `auteur` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `article` (
+  `art_id` int NOT NULL,
+  `art_nom` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `art_prix` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `art_float` float NOT NULL,
+  `art_pattern` int DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `livres`
+-- Déchargement des données de la table `article`
 --
 
-INSERT INTO `livres` (`id`, `titre`, `auteur`) VALUES
-(1, 'Berserk', 'Kentaro Miura'),
-(2, 'Chainsaw Man', 'Tatsuki Fujimoto'),
-(3, 'Shingeki no Kyojin (Attack on Titan)', 'Hajime Isayama'),
-(4, 'One Piece', 'Eiichiro Oda'),
-(5, 'Solo Leveling', 'Chugong'),
-(6, 'Tokyo Ghoul', 'Sui Ishida'),
-(7, 'One Punch-Man', 'One / Yusuke Murata'),
-(8, 'Oyasumi Punpun', 'Inio Asano'),
-(9, 'Jujutsu Kaisen', 'Gege Akutami'),
-(10, 'Kimetsu no Yaiba', 'Koyoharu Gotouge'),
-(11, 'Boku no Hero Academia', 'Kohei Horikoshi'),
-(12, 'Vagabond', 'Takehiko Inoue'),
-(13, 'Naruto', 'Masashi Kishimoto'),
-(14, 'Death Note', 'Tsugumi Ohba / Takeshi Obata'),
-(15, 'Bleach', 'Tite Kubo'),
-(16, '1984', 'George Orwell'),
-(17, 'Earth Abides', 'George R. Stewart'),
-(18, 'The Martian Chronicles', 'Ray Bradbury'),
-(19, 'The Puppet Masters', 'Robert A. Heinlein'),
-(20, 'The Day of the Triffids', 'John Wyndham'),
-(21, 'Limbo', 'Bernard Wolfe'),
-(22, 'The Demolished Man', 'Alfred Bester'),
-(23, 'Fahrenheit 451', 'Ray Bradbury'),
-(24, 'Childhood\'s End', 'Arthur C. Clarke'),
-(25, 'The Paradox Men', 'Charles L. Harness'),
-(26, 'Bring the Jubilee', 'Ward Moore'),
-(27, 'The Space Merchants', 'Frederik Pohl & C. M. Kornbluth'),
-(28, 'Ring Around the Sun', 'Clifford D. Simak'),
-(29, 'More Than Human', 'Theodore Sturgeon'),
-(30, 'Mission of Gravity', 'Hal Clement'),
-(31, 'Full Metal Alchemist', 'Hiromu Arakawa');
+INSERT INTO `article` (`art_id`, `art_nom`, `art_prix`, `art_float`, `art_pattern`) VALUES
+(4, 'test', '10', 10, NULL),
+(5, 'test', '10', 10, NULL),
+(6, 'test', '40', 40, NULL),
+(7, 'test', '40', 40, NULL),
+(10, 'chaussure', '20', 10, 123),
+(11, 'AK-47 | Fire Serpent', '1010', 0.15, 242);
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `livres`
+-- Index pour la table `article`
 --
-ALTER TABLE `livres`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `article`
+  ADD PRIMARY KEY (`art_id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `livres`
+-- AUTO_INCREMENT pour la table `article`
 --
-ALTER TABLE `livres`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+ALTER TABLE `article`
+  MODIFY `art_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
