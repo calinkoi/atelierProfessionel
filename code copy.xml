@@ -1,0 +1,21 @@
+console.log("Start WS");
+// 1. Créer un nouvel objet XMLHttpRequest
+let xhr = new XMLHttpRequest();
+
+// 2. Le configure : GET-request pour l'URL /article/.../load
+xhr.open('GET', '/article/xmlhttprequest/example/load');
+
+// 3. Envoyer la requête sur le réseau
+xhr.send();
+
+// 4. Ceci sera appelé après la réception de la réponse
+xhr.onload = function() {
+  if (xhr.status != 200) { // analyse l'état HTTP de la réponse
+    alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+  } else { // show the result
+    console.log("Done WS");
+  }
+};
+console.log("End WS");
+
+// https://geo.api.gouv.fr/departements?code=30&nom=Gard&fields=nom,code,codeRegion

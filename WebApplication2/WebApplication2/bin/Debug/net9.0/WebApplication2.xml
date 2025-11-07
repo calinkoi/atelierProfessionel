@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication2</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication2.Controllers.UserController.Get">
+            <summary>
+            Récupère la liste de tous les utilisateurs (GET all users)
+            </summary>
+        </member>
+        <member name="M:WebApplication2.Controllers.UserController.GetUserById(System.Int32)">
+            <summary>
+            Récupère un utilisateur par son Id (GET by Id)
+            </summary>
+            <param name="Id">Id de l'utilisateur à retourner</param>
+        </member>
+        <member name="M:WebApplication2.Controllers.UserController.InsertUser(WebApplication2.Entities.User)">
+            <summary>
+            Insère un nouvel utilisateur (POST)
+            </summary>
+        </member>
+        <member name="M:WebApplication2.Controllers.UserController.UpdateUser(WebApplication2.Entities.User)">
+            <summary>
+            Met à jour un utilisateur existant (PUT)
+            </summary>
+        </member>
+        <member name="M:WebApplication2.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Supprime un utilisateur par son Id (DELETE)
+            </summary>
+            <param name="Id">Id de l'utilisateur à supprimer</param>
+        </member>
+    </members>
+</doc>
