@@ -15,15 +15,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Executer la requete
 $response = curl_exec($ch);
-
     // Afficher la réponse brute (même si elle est vide ou en erreur)
     echo "<ul>";
     echo $response;
     echo "</ul";
-
-// --- Fin des vérifications ---
-
-// Fermer la session cURL
-curl_close($ch);
-
 ?>

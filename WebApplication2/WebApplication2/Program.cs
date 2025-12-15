@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication2.Entities; // NOTE : Remplacez WebApplication2 par le nom réel de votre projet si nécessaire.
+using WebApplication2.Entities;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
